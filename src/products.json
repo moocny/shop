@@ -1,0 +1,20 @@
+[
+    {
+        "id": 1,
+        "name": "Walnuts",
+        "slug": "walnuts",
+        "category": 1,
+        "description": "Walnuts, 1kg. Origin: Poland",
+        "price": "59.99",
+        "img": "walnuts.jpeg"
+    },
+    {
+        "id": 2,
+        "name": "Almonds",
+        "slug": "almonds",
+        "category": 1,
+        "description": "Almonds, 1kg. Origin: USA",
+        "price": "74.99",
+        "img": "almonds.jpeg"
+    }
+]

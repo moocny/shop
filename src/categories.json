@@ -1,22 +1,22 @@
 [
     {
         "id": 1,
-        "name": "Kategoria",
-        "slug": "kategoria"
+        "name": "Delicacies",
+        "slug": "delicacies"
     },
     {
         "id": 2,
-        "name": "Kategoria Druga",
-        "slug": "druga"
+        "name": "Oils, olives",
+        "slug": "oils-and-olives"
     },
     {
         "id": 3,
-        "name": "Kategoria Trzecia",
-        "slug": "trzecia"
+        "name": "Drinks",
+        "slug": "drinks"
     },
     {
         "id": 4,
-        "name": "Kategoria Czwarta",
-        "slug": "czw"
+        "name": "Coffee, tea",
+        "slug": "coffee-and-tea"
     }
 ]
