@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Layout, Icon, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
-import categories from './../categories.json';
-
 export class Navigation extends Component {
     state = {
         collapsed: false,
@@ -34,7 +32,7 @@ export class Navigation extends Component {
                         onClick={this.onCollapse}
                     />
                 </div>
-                <Menu theme="dark" mode="inline" defaultSelectedKeys={['home', 'categories']}>
+                <Menu theme="dark" mode="inline" defaultSelectedKeys={['home']}>
                     <Menu.Item key="home">
                         <Link to="/">
                             <Icon type="home" />
@@ -50,7 +48,7 @@ export class Navigation extends Component {
                             </span>
                         }
                     >
-                        {categories.map(category => (
+                        {this.props.categories.map(category => (
                             <Menu.Item key={category.id}>
                                 <Link to={`/category/${category.slug}`}>{category.name}</Link>
                             </Menu.Item>

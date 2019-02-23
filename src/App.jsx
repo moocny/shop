@@ -2,17 +2,28 @@ import React, { Component } from 'react';
 import { Layout } from 'antd';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { Navigation } from './components/Navigation';
+import categories from './categories.json';
+import products from './products.json';
+
 import { Home } from './views/Home';
-import { Categories } from './views/Categories';
+import { Category } from './views/Category';
+import { Product } from './views/Product';
 import { NotFound } from './views/NotFound';
 
+import { Navigation } from './components/Navigation';
+import { PropsRoute } from './components/PropsRoute.jsx';
+
 export class App extends Component {
+    state = {
+        categories,
+        products,
+    };
+
     render() {
         return (
             <BrowserRouter>
                 <Layout style={{ minHeight: '100vh' }}>
-                    <Navigation />
+                    <Navigation categories={this.state.categories} />
                     <Layout>
                         <Layout.Content
                             style={{
@@ -23,10 +34,19 @@ export class App extends Component {
                         >
                             <Switch>
                                 <Route exact path="/" component={Home} />
-                                <Route
+                                <PropsRoute
                                     exact
-                                    path="/category/:categorySlug"
-                                    component={Categories}
+                                    path="/category/:slug"
+                                    component={Category}
+                                    categories={this.state.categories}
+                                    products={this.state.products}
+                                />
+                                <PropsRoute
+                                    exact
+                                    path="/product/:slug"
+                                    component={Product}
+                                    categories={this.state.categories}
+                                    products={this.state.products}
                                 />
                                 <Route exact component={NotFound} />
                             </Switch>
