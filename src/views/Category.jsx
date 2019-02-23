@@ -1,5 +1,8 @@
 import React from 'react';
-import { withRouter, Link } from 'react-router-dom';
+import { withRouter } from 'react-router-dom';
+
+import { ProductCard } from '../components/ProductCard';
+import { Divider } from 'antd';
 
 const CategoryComponent = props => {
     const category = props.categories.find(category => category.slug === props.match.params.slug);
@@ -7,16 +10,20 @@ const CategoryComponent = props => {
 
     return (
         <div>
-            <h2>{category.name}</h2>
-            <ul>
+            <h1>{category.name}</h1>
+            <Divider />
+            <div
+                style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'left',
+                    flexWrap: 'wrap',
+                }}
+            >
                 {products.length > 0
-                    ? products.map(product => (
-                          <li key={product.id}>
-                              <Link to={`/product/${product.slug}`}>{product.name}</Link>
-                          </li>
-                      ))
+                    ? products.map(product => <ProductCard key={product.id} product={product} />)
                     : 'No products found'}
-            </ul>
+            </div>
         </div>
     );
 };

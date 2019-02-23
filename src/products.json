@@ -6,7 +6,7 @@
         "category": 1,
         "description": "Walnuts, 1kg. Origin: Poland",
         "price": "59.99",
-        "img": "walnuts.jpeg"
+        "img": "https://images.pexels.com/photos/1823476/pexels-photo-1823476.jpeg?dl&fit=crop&crop=entropy&w=640&h=426"
     },
     {
         "id": 2,
@@ -15,6 +15,6 @@
         "category": 1,
         "description": "Almonds, 1kg. Origin: USA",
         "price": "74.99",
-        "img": "almonds.jpeg"
+        "img": "https://images.pexels.com/photos/1549046/pexels-photo-1549046.jpeg?dl&fit=crop&crop=entropy&w=640&h=481"
     }
 ]

@@ -40,6 +40,7 @@ export class App extends Component {
                                     component={Category}
                                     categories={this.state.categories}
                                     products={this.state.products}
+                                    images={this.state.images}
                                 />
                                 <PropsRoute
                                     exact
@@ -47,6 +48,7 @@ export class App extends Component {
                                     component={Product}
                                     categories={this.state.categories}
                                     products={this.state.products}
+                                    images={this.state.images}
                                 />
                                 <Route exact component={NotFound} />
                             </Switch>
