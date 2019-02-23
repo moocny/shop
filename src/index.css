@@ -9,3 +9,11 @@
 .ant-carousel .slick-slide h3 {
     color: #fff;
 }
+
+.login-form {
+    max-width: 300px;
+}
+
+.login-form-button {
+    width: 100%;
+}

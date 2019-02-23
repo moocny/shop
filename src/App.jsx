@@ -9,6 +9,7 @@ import { Home } from './views/Home';
 import { Category } from './views/Category';
 import { Product } from './views/Product';
 import { NotFound } from './views/NotFound';
+import { LogIn } from './views/LogIn.jsx';
 
 import { Navigation } from './components/Navigation';
 import { PropsRoute } from './components/PropsRoute.jsx';
@@ -50,6 +51,7 @@ export class App extends Component {
                                     products={this.state.products}
                                     images={this.state.images}
                                 />
+                                <Route exact path="/account" component={LogIn} />
                                 <Route exact component={NotFound} />
                             </Switch>
                         </Layout.Content>
