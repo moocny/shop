@@ -112,11 +112,11 @@
 
     {
         "id": 12,
-        "name": "Multivitamine juice",
-        "slug": "multivitamine-juice",
+        "name": "Mixed juice",
+        "slug": "mixed-juice",
         "category": 3,
-        "description": "Multivitamine juice, 1l. Origin: Worldwide",
-        "price": "1.99",
+        "description": "Mixed juice, 1l. Origin: Worldwide",
+        "price": "2.99",
         "img": "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?dl&fit=crop&crop=entropy&w=640&h=480"
     },
 
