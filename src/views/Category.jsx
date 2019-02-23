@@ -16,7 +16,7 @@ const CategoryComponent = props => {
                 style={{
                     display: 'flex',
                     alignItems: 'center',
-                    justifyContent: 'left',
+                    justifyContent: 'center',
                     flexWrap: 'wrap',
                 }}
             >
