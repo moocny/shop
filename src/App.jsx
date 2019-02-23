@@ -2,10 +2,10 @@ import React, { Component } from 'react';
 import { Layout } from 'antd';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
-import { Home } from './Home';
-import { Navigation } from './Navigation';
-import { Category } from './Category';
-import { NotFound } from './NotFound';
+import { Navigation } from './components/Navigation';
+import { Home } from './views/Home';
+import { Categories } from './views/Categories';
+import { NotFound } from './views/NotFound';
 
 export class App extends Component {
     render() {
@@ -23,7 +23,11 @@ export class App extends Component {
                         >
                             <Switch>
                                 <Route exact path="/" component={Home} />
-                                <Route exact path="/category/:categorySlug" component={Category} />
+                                <Route
+                                    exact
+                                    path="/category/:categorySlug"
+                                    component={Categories}
+                                />
                                 <Route exact component={NotFound} />
                             </Switch>
                         </Layout.Content>

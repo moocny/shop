@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Layout, Icon, Menu } from 'antd';
 import { Link } from 'react-router-dom';
 
-import categories from './categories.json';
+import categories from './../categories.json';
 
 export class Navigation extends Component {
     state = {
