@@ -1,18 +1,22 @@
 [
     {
         "id": 1,
-        "name": "Kategoria"
+        "name": "Kategoria",
+        "slug": "kategoria"
     },
     {
         "id": 2,
-        "name": "Kategoria Druga"
+        "name": "Kategoria Druga",
+        "slug": "druga"
     },
     {
-        "id": 1,
-        "name": "Kategoria Trzecia"
+        "id": 3,
+        "name": "Kategoria Trzecia",
+        "slug": "trzecia"
     },
     {
-        "id": 1,
-        "name": "Kategoria Czwarta"
+        "id": 4,
+        "name": "Kategoria Czwarta",
+        "slug": "czw"
     }
 ]
