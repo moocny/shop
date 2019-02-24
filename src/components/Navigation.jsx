@@ -12,6 +12,25 @@ export class Navigation extends Component {
             collapsed: !this.state.collapsed,
         });
 
+    updateDimensions = () => {
+        if (window.innerWidth < 768) {
+            this.setState({ collapsed: true });
+        } else {
+            this.setState({ collapsed: false });
+        }
+    };
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
+        if (window.innerWidth < 768) {
+            this.setState({ collapsed: true });
+        }
+    }
+
+    componenWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
     render() {
         const cartLength = this.props.cart.length;
 

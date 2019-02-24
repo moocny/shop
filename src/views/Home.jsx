@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Carousel, Tag } from 'antd';
+import { Carousel, Button } from 'antd';
 
 // https://stackoverflow.com/questions/7158654/how-to-get-random-elements-from-an-array/7158691
 
@@ -24,15 +24,35 @@ export const Home = props => {
     console.log(props.categories);
 
     return (
-        <div style={{ margin: '-24px' }}>
-            <Carousel autoplay>
-                {randomProducts.map(product => (
-                    <img src={product.img} key={product.id} alt={product} />
-                ))}
-            </Carousel>
+        <div
+            style={{
+                margin: '-24px',
+                display: 'flex',
+                justifyContent: 'center',
+                alignItems: 'center',
+                flexDirection: 'column',
+            }}
+        >
+            <div style={{ width: '100%', maxWidth: 400 }}>
+                <Carousel autoplay effect="fade">
+                    {randomProducts.map(product => (
+                        <img src={product.img} key={product.id} alt={product} />
+                    ))}
+                </Carousel>
+            </div>
+            <h1 style={{ textTransform: 'uppercase', letterSpacing: 2, margin: '32px 0' }}>
+                Moocny Shop
+            </h1>
+
             {props.categories.map(category => (
-                <Link key={category.id} to={`/category/${category.slug}`}>
-                    <Tag>{category.name}</Tag>
+                <Link
+                    key={category.id}
+                    to={`/category/${category.slug}`}
+                    style={{ margin: '8px 0', padding: '0 24px', width: '100%' }}
+                >
+                    <Button style={{ width: '100%' }} size="large">
+                        {category.name}
+                    </Button>
                 </Link>
             ))}
         </div>

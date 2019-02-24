@@ -63,7 +63,13 @@ export class App extends Component {
                             }}
                         >
                             <Switch>
-                                <Route exact path="/" component={Home} />
+                                <PropsRoute
+                                    exact
+                                    path="/"
+                                    component={Home}
+                                    products={this.state.products}
+                                    categories={this.state.categories}
+                                />
                                 <PropsRoute
                                     exact
                                     path="/category/:slug"
