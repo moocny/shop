@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Form, Input, Checkbox, Button } from 'antd';
 
+// grid layout and view from https://ant.design/components/form/
 const formItemLayout = {
     labelCol: {
         xs: { span: 24 },
@@ -26,6 +27,7 @@ const tailFormItemLayout = {
     },
 };
 
+// signup component https://ant.design/components/form/
 class SignUpForm extends React.Component {
     state = {
         agreed: false,
