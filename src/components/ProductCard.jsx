@@ -11,8 +11,10 @@ export const ProductCard = ({ product }) => (
             <div style={{ textAlign: 'center' }}>
                 <strong style={{ fontSize: 18 }}>{product.name}</strong>
                 <Divider />
+                <h2 style={{ color: 'gray', fontSize: 16 }}>
+                    {parseFloat(product.price).toFixed(2)} zł
+                </h2>
                 <p>{product.description}</p>
-                <p style={{ color: 'darkred', fontSize: 16 }}>${product.price}</p>
             </div>
         </Card>
     </Link>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Form, Input, Checkbox, Button } from 'antd';
 
 const formItemLayout = {
@@ -26,14 +27,20 @@ const tailFormItemLayout = {
 };
 
 class SignUpForm extends React.Component {
+    state = {
+        agreed: false,
+    };
+
     handleSubmit = e => {
         e.preventDefault();
         this.props.form.validateFieldsAndScroll((err, values) => {
-            if (!err) {
+            if (err) {
                 console.log('Received values of form: ', values);
             }
         });
     };
+
+    handleCheckboxChange = () => this.setState({ agreed: !this.state.agreed });
 
     render() {
         const { getFieldDecorator } = this.props.form;
@@ -54,11 +61,11 @@ class SignUpForm extends React.Component {
                             rules: [
                                 {
                                     type: 'email',
-                                    message: 'The input is not valid E-mail!',
+                                    message: 'The input is not valid e-mail',
                                 },
                                 {
                                     required: true,
-                                    message: 'Please input your E-mail!',
+                                    message: 'Please input your e-mail',
                                 },
                             ],
                         })(<Input />)}
@@ -68,7 +75,7 @@ class SignUpForm extends React.Component {
                             rules: [
                                 {
                                     required: true,
-                                    message: 'Please input your password!',
+                                    message: 'Please input your password',
                                 },
                                 {
                                     validator: this.validateToNextPassword,
@@ -81,7 +88,7 @@ class SignUpForm extends React.Component {
                             rules: [
                                 {
                                     required: true,
-                                    message: 'Please confirm your password!',
+                                    message: 'Please confirm your password',
                                 },
                                 {
                                     validator: this.compareToFirstPassword,
@@ -90,16 +97,14 @@ class SignUpForm extends React.Component {
                         })(<Input type="password" />)}
                     </Form.Item>
                     <Form.Item {...tailFormItemLayout}>
-                        {getFieldDecorator('agreement', {
-                            valuePropName: 'checked',
-                        })(
-                            <Checkbox>
-                                I have read the <a href="">agreement</a>
+                        {getFieldDecorator('agreement')(
+                            <Checkbox onChange={this.handleCheckboxChange}>
+                                I have read <Link to="/signup">rules</Link>
                             </Checkbox>
                         )}
                     </Form.Item>
                     <Form.Item {...tailFormItemLayout}>
-                        <Button type="primary" htmlType="submit">
+                        <Button type="primary" htmlType="submit" disabled={!this.state.agreed}>
                             Register
                         </Button>
                     </Form.Item>

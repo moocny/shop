@@ -24,8 +24,8 @@
         "name": "Coconut oil",
         "slug": "coconut-oil",
         "category": 2,
-        "description": "Coconut oil, 1kg. Origin: Thailand",
-        "price": "19.99",
+        "description": "Coconut oil, 1l. Origin: Thailand",
+        "price": "29.99",
         "img": "https://images.pexels.com/photos/725998/pexels-photo-725998.jpeg?dl&fit=crop&crop=entropy&w=640&h=426"
     },
 
@@ -34,8 +34,8 @@
         "name": "Olive oil",
         "slug": "olive-oil",
         "category": 2,
-        "description": "Olive oil, 1kg. Origin: Italy",
-        "price": "9.99",
+        "description": "Olive oil, 1l. Origin: Italy",
+        "price": "19.99",
         "img": "https://images.pexels.com/photos/33783/olive-oil-salad-dressing-cooking-olive.jpg?dl&fit=crop&crop=entropy&w=640&h=426"
     },
 
@@ -45,7 +45,7 @@
         "slug": "orange-juice",
         "category": 3,
         "description": "Orange juice, 1l. Origin: Spain",
-        "price": "3.99",
+        "price": "11.99",
         "img": "https://images.pexels.com/photos/158053/fresh-orange-juice-squeezed-refreshing-citrus-158053.jpeg?dl&fit=crop&crop=entropy&w=640&h=426"
     },
 
@@ -55,7 +55,7 @@
         "slug": "strawberry-smoothie",
         "category": 3,
         "description": "Strawberry smoothie, 1l. Origin: Poland",
-        "price": "6.99",
+        "price": "14.99",
         "img": "https://images.pexels.com/photos/161600/smoothie-fruit-beverage-drink-161600.jpeg?dl&fit=crop&crop=entropy&w=640&h=423"
     },
 
@@ -65,7 +65,7 @@
         "slug": "green-smoothie",
         "category": 3,
         "description": "Green smoothie, 1l. Origin: Poland",
-        "price": "6.99",
+        "price": "9.99",
         "img": "https://images.pexels.com/photos/616833/pexels-photo-616833.jpeg?dl&fit=crop&crop=entropy&w=640&h=426"
     },
 
@@ -75,7 +75,7 @@
         "slug": "kiwi-smoothie",
         "category": 3,
         "description": "Kiwi smoothie, 1l. Origin: Italy",
-        "price": "3.99",
+        "price": "12.99",
 
         "img": "https://images.pexels.com/photos/1645638/pexels-photo-1645638.jpeg?dl&fit=crop&crop=entropy&w=640&h=467"
     },
@@ -86,7 +86,7 @@
         "slug": "apple-juice",
         "category": 3,
         "description": "Apple juice, 1l. Origin: Poland",
-        "price": "1.99",
+        "price": "3.99",
         "img": "https://images.pexels.com/photos/1536868/pexels-photo-1536868.jpeg?dl&fit=crop&crop=entropy&w=640&h=436"
     },
 
@@ -96,7 +96,7 @@
         "slug": "raspberry-juice",
         "category": 3,
         "description": "Raspberry juice, 1l. Origin: Poland",
-        "price": "4.99",
+        "price": "13.99",
         "img": "https://images.pexels.com/photos/1282274/pexels-photo-1282274.jpeg?dl&fit=crop&crop=entropy&w=640&h=427"
     },
 
@@ -116,7 +116,7 @@
         "slug": "mixed-juice",
         "category": 3,
         "description": "Mixed juice, 1l. Origin: Worldwide",
-        "price": "2.99",
+        "price": "7.99",
         "img": "https://images.pexels.com/photos/1132047/pexels-photo-1132047.jpeg?dl&fit=crop&crop=entropy&w=640&h=480"
     },
 
@@ -126,7 +126,7 @@
         "slug": "coffee",
         "category": 4,
         "description": "Coffee, 100g. Origin: Worldwide",
-        "price": "1.99",
+        "price": "9.99",
         "img": "https://images.pexels.com/photos/6347/coffee-cup-working-happy.jpg?dl&fit=crop&crop=entropy&w=640&h=426"
     },
 
@@ -136,7 +136,7 @@
         "slug": "green-tea",
         "category": 4,
         "description": "Green tea, 100g. Origin: China",
-        "price": "3.99",
+        "price": "8.99",
         "img": "https://images.pexels.com/photos/428615/teacup-cup-of-tea-tee-drink-428615.jpeg?dl&fit=crop&crop=entropy&w=640&h=426}"
     },
 
@@ -146,7 +146,7 @@
         "slug": "black-tea",
         "category": 4,
         "description": "Black tea, 100g. Origin: India",
-        "price": "2.99",
+        "price": "6.99",
         "img": "https://images.pexels.com/photos/1493080/pexels-photo-1493080.jpeg?dl&fit=crop&crop=entropy&w=640&h=426"
     }
 ]

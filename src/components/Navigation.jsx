@@ -13,6 +13,8 @@ export class Navigation extends Component {
         });
 
     render() {
+        const cartLength = this.props.cart.length;
+
         return (
             <Layout.Sider collapsible collapsed={this.state.collapsed} onCollapse={this.onCollapse}>
                 <div
@@ -27,12 +29,20 @@ export class Navigation extends Component {
                 >
                     <Icon
                         style={{ color: 'white' }}
-                        className="trigger"
                         type={this.state.collapsed ? 'menu-unfold' : 'menu-fold'}
                         onClick={this.onCollapse}
                     />
                 </div>
                 <Menu theme="dark" mode="inline" defaultSelectedKeys={['home']}>
+                    {cartLength > 0 && (
+                        <Menu.Item key="cart">
+                            <Link to="/cart">
+                                <Icon type="shopping-cart" />
+                                <span>{`Cart ${cartLength > 0 ? `(${cartLength})` : ''}`}</span>
+                            </Link>
+                        </Menu.Item>
+                    )}
+
                     <Menu.Item key="home">
                         <Link to="/">
                             <Icon type="home" />
