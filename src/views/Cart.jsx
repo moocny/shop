@@ -64,7 +64,9 @@ export class Cart extends Component {
                     pagination={false}
                     locale={{ emptyText: 'Cart is empty' }}
                 />
-                {productsCost && <div>Total: {parseFloat(productsCost).toFixed(2)} zł</div>}
+                <h3 style={{ margin: '16px 0' }}>
+                    {productsCost && <div>Total: {parseFloat(productsCost).toFixed(2)} zł</div>}
+                </h3>
             </div>
         );
     }
