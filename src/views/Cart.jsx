@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import { Table, Button } from 'antd';
 
+// define column layout for cart table
 const columns = removeFromCart => [
     {
         title: 'Name',
@@ -10,7 +11,8 @@ const columns = removeFromCart => [
     {
         title: 'Price',
         dataIndex: 'price',
-        render: price => `${price} zł`,
+        // show price in fixed comma with currency
+        render: price => `${parseFloat(price).toFixed(2)} zł`,
     },
     {
         title: 'Quantity',
@@ -20,6 +22,7 @@ const columns = removeFromCart => [
         dataIndex: 'id',
         width: 50,
         render: id => (
+            // button for removing item from cart
             <Button type="danger" onClick={e => removeFromCart(e, id)}>
                 Remove
             </Button>
@@ -27,6 +30,7 @@ const columns = removeFromCart => [
     },
 ];
 
+// cart component
 export class Cart extends Component {
     handleClick = (e, id) => {
         e.preventDefault();
@@ -35,6 +39,7 @@ export class Cart extends Component {
     };
 
     render() {
+        // get data about products in cart
         const productsInCart = this.props.cart.map(product => {
             const productData = this.props.products.find(
                 productData => productData.id === product.id
@@ -43,6 +48,7 @@ export class Cart extends Component {
             return { ...product, ...productData };
         });
 
+        // sum all of the products prices multiplied by quantity
         const productsCost =
             productsInCart.length > 0 &&
             productsInCart.map(product => product.price * product.quantity).reduce((a, b) => a + b);
