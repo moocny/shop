@@ -20,8 +20,18 @@ export class Navigation extends Component {
         }
     };
 
+    updateScroll = () => {
+        if (window.scrollY > 200) {
+            this.setState({ collapsed: true });
+        } else {
+            this.setState({ collapsed: false });
+        }
+    };
+
     componentDidMount() {
         window.addEventListener('resize', this.updateDimensions);
+        window.addEventListener('scroll', this.updateScroll);
+
         if (window.innerWidth < 768) {
             this.setState({ collapsed: true });
         }
@@ -29,6 +39,7 @@ export class Navigation extends Component {
 
     componenWillUnmount() {
         window.removeEventListener('resize', this.updateDimensions);
+        window.removeEventListener('scroll', this.updateScroll);
     }
 
     render() {
