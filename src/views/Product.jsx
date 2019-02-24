@@ -2,14 +2,18 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Button, InputNumber } from 'antd';
 
+// product component
 export class ProductComponent extends Component {
+    // state that holds quantity
     state = {
         quantity: 1,
     };
 
+    // save quantity to state
     changeQuantity = quantity => this.setState({ quantity });
 
     render() {
+        // find product from products data based on product slug from url
         const product = this.props.products.find(
             product => product.slug === this.props.match.params.slug
         );
@@ -36,9 +40,12 @@ export class ProductComponent extends Component {
                     <InputNumber
                         placeholder="Quantity"
                         value={this.state.quantity}
+                        // on input number change, save quantity
                         onChange={this.changeQuantity}
                     />
+
                     <Button
+                        // on click, call addToCart function with product id and quantity
                         onClick={() => this.props.addToCart(product.id, this.state.quantity)}
                         type="primary"
                     >

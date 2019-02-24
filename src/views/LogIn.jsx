@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 
+// log in component
 class LogInForm extends React.Component {
     handleSubmit = e => {
         e.preventDefault();
@@ -17,6 +18,7 @@ class LogInForm extends React.Component {
         const { getFieldDecorator } = this.props.form;
 
         return (
+            // https://ant.design/components/form/
             <div
                 style={{
                     display: 'flex',
