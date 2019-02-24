@@ -10,6 +10,7 @@ import { Category } from './views/Category';
 import { Product } from './views/Product';
 import { NotFound } from './views/NotFound';
 import { LogIn } from './views/LogIn.jsx';
+import { SignUp } from './views/SignUp.jsx';
 
 import { Navigation } from './components/Navigation';
 import { PropsRoute } from './components/PropsRoute.jsx';
@@ -52,6 +53,7 @@ export class App extends Component {
                                     images={this.state.images}
                                 />
                                 <Route exact path="/account" component={LogIn} />
+                                <Route exact path="/signup" component={SignUp} />
                                 <Route exact component={NotFound} />
                             </Switch>
                         </Layout.Content>

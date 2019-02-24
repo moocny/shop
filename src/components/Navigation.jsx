@@ -60,12 +60,6 @@ export class Navigation extends Component {
                             <span>Account</span>
                         </Link>
                     </Menu.Item>
-                    <Menu.Item key="contact">
-                        <Link to="/contact">
-                            <Icon type="mail" />
-                            <span>Contact</span>
-                        </Link>
-                    </Menu.Item>
                 </Menu>
             </Layout.Sider>
         );
