@@ -38,7 +38,7 @@ export class Navigation extends Component {
         window.addEventListener('resize', this.updateDimensions);
         window.addEventListener('scroll', this.updateScroll);
 
-        // when mobile view, show collapsed menu from beginning
+        // when on mobile view, show collapsed menu from beginning
         if (window.innerWidth < 768) {
             this.setState({ collapsed: true });
         }
