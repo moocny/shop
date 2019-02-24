@@ -1,5 +1,7 @@
 # moocny shop
 
+https://moocny.github.io/shop/
+
 ## how to run
 
 1. install [nodejs](https://nodejs.org/en/)
