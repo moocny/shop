@@ -2,6 +2,9 @@
 
 https://moocny.github.io/shop/
 
+## author
+Paweł Mocny pawel.mocny@microsoft.wsei.edu.pl
+
 ## how to run
 
 1. install [nodejs](https://nodejs.org/en/)
